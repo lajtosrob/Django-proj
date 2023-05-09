@@ -14,5 +14,22 @@
     <br>
 
     {{ nevek_szotar }}
+
+    <br>
+
+    {% for nev in nevek_lista %}
+
+        <p><strong>{{ nev }}</strong></p>
+
+    {% endfor %} 
+
+    <br>
+
+    {% for nev, kor in nevek_szotar.items %}
+
+    <p>{{ nev }} - {{ kor }}</p>
+
+    {% endfor %}
+
 </body>
 </html>
