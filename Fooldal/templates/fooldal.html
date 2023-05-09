@@ -19,13 +19,37 @@
 
     {% for nev in nevek_lista %}
 
-        <p><strong>{{ nev }}</strong></p>
+    {% if nev == "Eszter" %}
+
+       <p><b style="color: red; text-decoration: line-through;">{{nev}}</b> </p>    
+
+    {% elif nev == "Hajnalka" %}
+
+       <p><b style="background-color: yellow; text-decoration: underline;">{{ nev }}</b></p> 
+
+    {% else %}
+    
+    <p><strong>{{ nev }}</strong></p>
+
+    {% endif %}
+
+       
 
     {% endfor %} 
 
     <br>
 
     {% for nev, kor in nevek_szotar.items %}
+
+    {% if kor > 23 %}
+
+        <h1>{{ nev }}</h1>
+
+    {% else %}
+
+        {{ nev }}
+
+    {% endif %}
 
     <p>{{ nev }} - {{ kor }}</p>
 
