@@ -8,5 +8,10 @@ class Szemely(models.Model):
     elettortenet = models.TextField()
     letrehozva = models.DateField(auto_now_add=True)
 
+    class Meta:
+        verbose_name_plural = "Szemelyek"
+
+    def __str__(self):
+        return f"{self.vezeteknev} { self.keresztnev}"
     
 
