@@ -17,5 +17,5 @@ def fooldal(request):
 
 
 def fooldal(request):
-    szemelyek = Szemely.objects.all()
+    szemelyek = Szemely.objects.filter(keresztnev__contains="e")
     return render(request, 'fooldal.html', {"szemelyek": szemelyek})
