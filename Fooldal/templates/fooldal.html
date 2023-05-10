@@ -9,7 +9,44 @@
 <body>
     <h1>Üdv a főoldalon!</h1>
 
-  
+    <table style="border: solid 1px black;">
+        <tr style="border: solid 1px black;">
+            <th>Vezetéknév</th>
+            <th>Keresztnév</th>
+            <th>Életkor</th>
+            <th>Házas</th>
+            <th>Élettörténet</th>
+            <th>Létrehozva</th>
+        </tr>    
+        {% for szemely in szemelyek %}
+
+        <tr>
+            {% if szemely.hazas %}
+
+            <td style="color: red;">{{ szemely.vezeteknev }}</td>
+            <td>{{ szemely.keresztnev }}</td>
+            <td>{{ szemely.eletkor }}</td>
+            <td>{{ szemely.hazas }}</td>
+            <td>{{ szemely.elettortenet }}</td>
+            <td>{{ szemely.letrehozva }}</td>
+            
+            {% else %}
+
+            <td style="font-family: calibri;">{{ szemely.vezeteknev }}</td>
+            <td>{{ szemely.keresztnev }}</td>
+            <td>{{ szemely.eletkor }}</td>
+            <td>{{ szemely.hazas }}</td>
+            <td>{{ szemely.elettortenet }}</td>
+            <td>{{ szemely.letrehozva }}</td>
+
+            {% endif %}
+
+
+        </tr>
+        
+        {% endfor %}
+
+    </table>
 
 </body>
 </html>

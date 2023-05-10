@@ -1,8 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from . models import Szemely
 
 # Create your views here.
 
+"""
 def fooldal(request):
     egy_nev = 'Eszter'
 
@@ -12,6 +13,9 @@ def fooldal(request):
 
 
     return render(request, 'fooldal.html', {'nevek_lista': nevek_lista, 'nevek_szotar': nevek_szotar})
+"""
 
-def rolunk(request):
-    return render(request, 'rolunk.html')
+
+def fooldal(request):
+    szemelyek = Szemely.objects.all()
+    return render(request, 'fooldal.html', {"szemelyek": szemelyek})

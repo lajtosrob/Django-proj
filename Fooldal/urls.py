@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
     path('', views.fooldal),
-    path('rolunk/', views.rolunk)
+    #path('rolunk/', views.rolunk)
 ]
