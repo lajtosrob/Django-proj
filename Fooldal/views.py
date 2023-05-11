@@ -15,6 +15,11 @@ def fooldal(request):
     return render(request, 'fooldal.html', {'nevek_lista': nevek_lista, 'nevek_szotar': nevek_szotar})
 """
 
+def rolunk(request):
+    return render(request, rolunk.html)
+
+def kapcsolat(request):
+    return render(request, kapcsolat.html)
 
 def fooldal(request):
     szemelyek = Szemely.objects.all()
