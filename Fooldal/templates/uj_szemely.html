@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Új személy</title>
+</head>
+<body>
+    <form method="post">
+
+        {% csrf_token %}
+
+        <label for="veznev">Vezetéknév:</label><br>
+        <input type="text" id="veznev" name="veznev" required><br>
+        <label for="kernev">Keresztnév:</label><br>
+        <input type="text" id="kernev" name="kernev" required><br>
+        <label for="kor">Kor:</label><br>
+        <input type="number" id="kor" name="kor" value=18><br>
+        <label for="hazas">Házas</label>
+        <input type="checkbox" id="hazas" name="hazas"><br>
+
+
+        <label for="tortenet">Élettörténet:</label><br>
+        <textarea rows="4" cols="50" name="tortenet" id="tortenet"></textarea><br>
+        <label for="letrehoz">Létrehozva:</label><br>
+        <input type="date" id="letrehoz" name="letrehoz"><br>
+
+        <input type="submit" value="Mentés" id="mentes" name="mentes">
+
+
+    </form>
+</body>
+</html>
