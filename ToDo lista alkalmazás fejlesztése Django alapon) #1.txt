@@ -1,0 +1,91 @@
+
+
+- python Linting, Debugging install in VS code
+
+in cmd:
+
+md ToDoList_Project
+
+cd ToDoList_Project
+
+python --version
+
+python -m pip install --upgrade pip
+
+pip install --upgrade virtualenv
+
+virtualenv ToDoList_Env
+
+pip --upgrade django
+
+django-admin startproject ToDoList_Site
+
+cd ToDoList_Site
+
+python manage.py runserver (szerver elindítása)
+
+python manage.py startapp ToDoList_App
+
+- in urls.py in ToDoList_Site:
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+	path('todolist_app/', include('ToDoList_App.urls')),
+	path('admin/', admin.site.urls),
+]
+
+- in urls.py in ToDoList_App:
+
+
+from django.contrib import admin
+from django.urls import include, path
+from . import views
+
+urlpatterns = [
+	path('', views.index, name='index'),
+]
+
+in views.py n ToDoList_App:
+
+from django.shortcuts import render
+from django.http import HttpResponse
+
+def index(request):
+	return HttpResponse('Hello Világ!')
+
+pyhton manage.py runserver 
+
+In the browser: localhost:8000/todolist_app/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
