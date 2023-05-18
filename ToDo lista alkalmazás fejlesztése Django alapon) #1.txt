@@ -63,6 +63,26 @@ In the browser: localhost:8000/todolist_app/
 
 
 
+2nd version:
+
+python
+
+pip install virtualenv
+
+virtualenv CodingWithMitchBlogCourse
+
+cd CodingWithMitchBlogCourse
+
+Scripts\activate
+
+
+
+
+
+
+
+
+
 
 
 

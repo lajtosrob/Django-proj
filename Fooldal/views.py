@@ -16,14 +16,18 @@ def fooldal(request):
 """
 
 def rolunk(request):
-    return render(request, rolunk.html)
+    return render(request, 'rolunk.html' )
 
 def kapcsolat(request):
-    return render(request, kapcsolat.html)
+    return render(request, 'kapcsolat.html')
+
+def szemelyek(request):
+    szemelyek = Szemely.objects.all()
+    return render(request, 'szemelyek.html', {"szemelyek": szemelyek})
 
 def fooldal(request):
     szemelyek = Szemely.objects.all()
-    return render(request, 'fooldal.html', {"szemelyek": szemelyek})
+    return render(request, 'fooldal.html')
 
 def uj_szemely(request):
     if request.method == "GET":
