@@ -28,9 +28,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'kapcsolat' %}" tabindex="-1" aria-disabled="true">Kapcsolat</a>
               </li>
+              {% if request.path == '/szemelyek/' %}
               <li class="nav-item mx-4">
                 <input type="button" class="btn btn-primary mb-5" onclick="location.href={% url 'uj-szemely' %}" value="új személy">    
-              </li>
+              </li>              
+              {% endif %}
+
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

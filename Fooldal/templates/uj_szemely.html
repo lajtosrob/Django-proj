@@ -7,22 +7,25 @@
 
         {% csrf_token %}
 
-        <label for="veznev">Vezetéknév:</label><br>
-        <input type="text" id="veznev" name="veznev" required><br>
-        <label for="kernev">Keresztnév:</label><br>
-        <input type="text" id="kernev" name="kernev" required><br>
-        <label for="kor">Kor:</label><br>
-        <input type="number" id="kor" name="kor" value=18><br>
-        <label for="hazas">Házas</label>
-        <input type="checkbox" id="hazas" name="hazas"><br>
+        <label for="veznev">Vezetéknév:</label>
+        <input type="text" class="form-control" id="veznev" name="veznev" required>
+        <label for="kernev">Keresztnév:</label>
+        <input type="text" class="form-control" id="kernev" name="kernev" required>
+        <div class="flex-row mt-4 mb-4">
+        <label for="kor">Kor:</label>
+        <input type="number" class="" id="kor" name="kor" value=18>
+        <label for="hazas" class="mx-4">Házas</label>
+        <input type="checkbox" class="form-check-input align-middle" id="hazas" name="hazas">            
+        </div>
 
 
-        <label for="tortenet">Élettörténet:</label><br>
-        <textarea rows="4" cols="50" name="tortenet" id="tortenet"></textarea><br>
-        <label for="letrehoz">Létrehozva:</label><br>
-        <input type="date" id="letrehoz" name="letrehoz"><br>
 
-        <input type="submit" value="Mentés" id="mentes" name="mentes">
+        <label for="tortenet">Élettörténet:</label>
+        <textarea rows="4" class="form-control" cols="50" name="tortenet" id="tortenet"></textarea>
+        <label for="letrehoz">Létrehozva:</label>
+        <input type="date" class="form-control" id="letrehoz" name="letrehoz">
+
+        <input type="submit" class="btn btn-danger mb-4 mt-4" value="Mentés" id="mentes" name="mentes">
 
 
     </form>
