@@ -2,6 +2,52 @@
 
 {% block tartalom %}
 
+
+<table class="table shadow">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Keresztnév</th>
+        <th>Vezetéknév</th>
+        <th>Kor</th>
+        <th>Házas</th>
+    </tr>
+
+</thead>
+<tbody>
+    {% for szemely in szemelyek  %}
+    
+    {% if szemely.hazas %}
+    
+    <tr class="table-success">
+        <td>{{ szemely.id }}</td>
+        <td>{{ szemely.vezeteknev }}</td>
+        <td>{{ szemely.keresztnev }}</td>
+        <td>{{ szemely.eletkor }}</td>
+    </tr>
+
+    {% else %}
+
+    <tr class="table-warning">
+        <td>{{ szemely.id }}</td>
+        <td>{{ szemely.vezeteknev }}</td>
+        <td>{{ szemely.keresztnev }}</td>
+        <td>{{ szemely.eletkor }}</td>
+    </tr>
+
+    {% endif %}
+    
+    {% endfor %}
+</tbody>
+</table>
+    <div class="row justify-content-center">
+        <div class="col-1">
+
+    <input type="button" class="btn btn-primary mb-5" onclick="location.href={% url 'uj-szemely' %}" value="új személy">    
+    </div></div>
+    
+
+<!---
 <input type="button" onclick="location.href={% url 'uj-szemely' %}" value="Új személy">
 
     <table style="border: solid 1px black;">
@@ -42,6 +88,8 @@
         {% endfor %}
 
     </table>   
+-->
+
 
 {% endblock tartalom %}
 
